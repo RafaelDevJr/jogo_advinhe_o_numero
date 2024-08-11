@@ -1,0 +1,27 @@
+    <script>
+
+alert('Vamos Jogar?')
+
+const num_secreto = parseInt(Math.random()*10);
+let chute = '';
+let acertou = false;
+
+for (let c = 0; c < 3; c++) {
+    chute = parseInt(prompt('Tente advinhar um numero de 0 a 10:'));
+    if (chute == num_secreto){
+        alert(`Você acertou! Numero secreto é ${num_secreto}.`);
+        acertou = true;
+        break;
+    } else{
+        alert('Você erro! Tente novamente.');
+    }
+    if(chute > 10){
+        alert('ERRO - Entrada invalida.');
+    }
+}
+if(!acertou){
+    alert(`Acabaram as chances, o numero secreto é ${num_secreto}.`);
+}
+
+    
+    </script>
